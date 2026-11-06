@@ -1,0 +1,9 @@
+source,status,doc_type,number,supplier_nit,supplier,issue_date,lines,lines_auto_matched,payable_total,alegra_id,issues,detail
+01_normal_DAP1001.zip/adDAP1001.xml,processed,invoice,DAP1001,900111222,DISTRIBUIDORA ANDINA DE PARTES DEMO S.A.S.,2026-03-02,4,4,738752.00,DRY-1001,,"dry-run: payload saved, nothing sent"
+02_discounts_LUB2210.zip/adLUB2210.xml,processed,invoice,LUB2210,900333444,LUBRICANTES DEL VALLE DEMO S.A.S.,2026-03-05,3,3,1028445.60,DRY-1002,,"dry-run: payload saved, nothing sent"
+03_credit_note_NCA77.zip/adNCA77.xml,skipped,credit_note,NCA77,900111222,DISTRIBUIDORA ANDINA DE PARTES DEMO S.A.S.,2026-03-09,1,0,92582.00,,NOT_AN_INVOICE,"credit note (refers to DAP1001): register it as a supplier credit/debit note, not as a purchase bill"
+04_duplicate_resend_DAP1001.zip/adDAP1001.xml,duplicate,invoice,DAP1001,900111222,DISTRIBUIDORA ANDINA DE PARTES DEMO S.A.S.,2026-03-02,4,0,738752.00,,DUPLICATE_CUFE,CUFE already registered (8d0130e26d0ba390...)
+05_unknown_product_IMP5501.zip/adIMP5501.xml,needs_review,invoice,IMP5501,900555666,IMPORTADORA MOTOPIEZAS DEMO LTDA,2026-03-11,3,0,438515.00,,,3 of 3 line(s) need a product decision
+06_totals_mismatch_LUB2231.zip/adLUB2231.xml,needs_review,invoice,LUB2231,900333444,LUBRICANTES DEL VALLE DEMO S.A.S.,2026-03-15,2,2,285128.00,,TOTALS_MISMATCH,"Lines add up to 211,200.00 but the invoice subtotal is 245,000.00"
+07_bare_xml_fuzzy_FYC310.xml,processed,invoice,FYC310,800777888,FRENOS Y CLUTCH DEMO S.A.,2026-03-18,2,2,253470.00,DRY-1003,,"dry-run: payload saved, nothing sent"
+08_corrupt_file.zip,error,,,,,,0,0,,,,File is not a zip file

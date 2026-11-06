@@ -1,0 +1,11 @@
+.env
+output/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+# never commit real supplier invoices
+invoices/
+real_data/

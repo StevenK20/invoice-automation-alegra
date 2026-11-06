@@ -1,0 +1,49 @@
+{
+  "date": "2026-03-05",
+  "dueDate": "2026-04-04",
+  "provider": 12,
+  "numberTemplate": {
+    "number": "LUB2210"
+  },
+  "warehouse": {
+    "id": "1"
+  },
+  "purchases": {
+    "items": [
+      {
+        "id": 201,
+        "price": 19000.0,
+        "quantity": 36.0,
+        "discount": 8.0,
+        "tax": [
+          {
+            "id": 3
+          }
+        ]
+      },
+      {
+        "id": 202,
+        "price": 15400.0,
+        "quantity": 12.0,
+        "discount": 5.0,
+        "tax": [
+          {
+            "id": 3
+          }
+        ]
+      },
+      {
+        "id": 203,
+        "price": 9900.0,
+        "quantity": 6.0,
+        "discount": 0.0,
+        "tax": [
+          {
+            "id": 3
+          }
+        ]
+      }
+    ]
+  },
+  "observations": "Loaded automatically from e-invoice XML on 2026-11-06"
+}

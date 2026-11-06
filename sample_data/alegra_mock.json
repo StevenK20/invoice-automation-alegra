@@ -1,0 +1,11 @@
+{
+  "_comment": "Offline stand-in for Alegra used by --dry-run. All values are fictitious.",
+  "providers": {
+    "900111222": "11",
+    "900333444": "12",
+    "900555666": "13",
+    "800777888": "14"
+  },
+  "taxes": {"0": "1", "5": "2", "19": "3"},
+  "registered_cufes": []
+}

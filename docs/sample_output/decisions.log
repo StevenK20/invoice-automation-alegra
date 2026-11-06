@@ -1,0 +1,43 @@
+14:57:51 INFO    ==============================================================================
+14:57:51 INFO    Mode: DRY-RUN: nothing is sent; payloads are written to output/dry_run_payloads/
+14:57:51 INFO    Input: sample_data/invoices
+14:57:51 INFO    ==============================================================================
+14:57:51 INFO    [dry-run] would POST /bills for DAP1001 (4 items)
+14:57:51 INFO    PROCESSED    DAP1001   01_normal_DAP1001.zip/adDAP1001.xml | dry-run: payload saved, nothing sent
+14:57:51 DEBUG      line 1 DA-1001        -> item 101 via standard_code (98%)
+14:57:51 DEBUG      line 2 DA-2040        -> item 102 via supplier_code (100%)
+14:57:51 DEBUG      line 3 DA-3310        -> item 104 via standard_code (98%)
+14:57:51 DEBUG      line 4 XZ-0001        -> item 105 via standard_code (98%)
+14:57:51 INFO    [dry-run] would POST /bills for LUB2210 (3 items)
+14:57:51 INFO    PROCESSED    LUB2210   02_discounts_LUB2210.zip/adLUB2210.xml | dry-run: payload saved, nothing sent
+14:57:51 DEBUG      line 1 LV-20W50-C12   -> item 201 via equivalence (100%) x12
+14:57:51 DEBUG      line 2 LV-CAD-400     -> item 202 via supplier_code (100%)
+14:57:51 DEBUG      line 3 LV-REF-1L      -> item 203 via equivalence (100%)
+14:57:51 INFO    SKIPPED      NCA77     03_credit_note_NCA77.zip/adNCA77.xml | credit note (refers to DAP1001): register it as a supplier credit/debit note, not as a purchase bill
+14:57:51 DEBUG      check NOT_AN_INVOICE: credit note (refers to DAP1001): register it as a supplier credit/debit note, not as a purchase bill
+14:57:51 INFO    DUPLICATE    DAP1001   04_duplicate_resend_DAP1001.zip/adDAP1001.xml | CUFE already registered (8d0130e26d0ba390...)
+14:57:51 DEBUG      check DUPLICATE_CUFE: CUFE already registered (8d0130e26d0ba390...)
+14:57:51 INFO    NEEDS_REVIEW IMP5501   05_unknown_product_IMP5501.zip/adIMP5501.xml | 3 of 3 line(s) need a product decision
+14:57:51 INFO       line 1 IM-77801       -> REVIEW: Unknown product: code 'IM-77801' not in catalog or equivalences
+14:57:51 INFO       line 2 IM-90001       -> REVIEW: Similar name to item 301 'KIT ARRASTRE 428 CB 125 ESTANDAR DEMO' (88%), but item 302 is also 88%
+14:57:51 INFO       line 3 IM-55511       -> REVIEW: Similar name to item 303 'ESPEJO RETROVISOR PLEGABLE NEGRO PAR DEMO' (80%), confirm before linking
+14:57:51 INFO    NEEDS_REVIEW LUB2231   06_totals_mismatch_LUB2231.zip/adLUB2231.xml | Lines add up to 211,200.00 but the invoice subtotal is 245,000.00
+14:57:51 DEBUG      line 1 LV-CAD-400     -> item 202 via supplier_code (100%)
+14:57:51 DEBUG      line 2 LV-REF-1L      -> item 203 via equivalence (100%)
+14:57:51 DEBUG      check TOTALS_MISMATCH: Lines add up to 211,200.00 but the invoice subtotal is 245,000.00
+14:57:51 INFO    [dry-run] would POST /bills for FYC310 (2 items)
+14:57:51 INFO    PROCESSED    FYC310    07_bare_xml_fuzzy_FYC310.xml | dry-run: payload saved, nothing sent
+14:57:51 DEBUG      line 1 FC-9001        -> item 401 via fuzzy (95%)
+14:57:51 DEBUG      line 2 FC-9002        -> item 402 via fuzzy (92%)
+14:57:51 WARNING Cannot read 08_corrupt_file.zip: File is not a zip file
+14:57:51 INFO    ERROR        -         08_corrupt_file.zip | File is not a zip file
+14:57:51 INFO    ------------------------------------------------------------------------------
+14:57:51 INFO    Documents read: 8
+  duplicate     1
+  error         1
+  needs_review  2
+  processed     3
+  skipped       1
+Product lines: 14 | matched without intervention: 11 (79%)
+  by layer: standard_code=3, supplier_code=3, equivalence=3, fuzzy=2
+14:57:51 INFO    Reports: results.csv | review_queue.csv | decisions.log

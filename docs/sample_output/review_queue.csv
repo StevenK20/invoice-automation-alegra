@@ -1,0 +1,5 @@
+number,supplier_nit,line,supplier_code,description,quantity,unit_cost,suggested_item_id,suggested_item,score,reason,suggested_retail_price,decision_item_id,decision_pack_factor
+IMP5501,900555666,1,IM-77801,DIRECCIONAL LED UNIVERSAL AMBAR PAR,4.0,21000.00,,,,Unknown product: code 'IM-77801' not in catalog or equivalences,34000,,
+IMP5501,900555666,2,IM-90001,KIT ARRASTRE 428 CB 125,2.0,96000.00,301,KIT ARRASTRE 428 CB 125 ESTANDAR DEMO,0.88,"Similar name to item 301 'KIT ARRASTRE 428 CB 125 ESTANDAR DEMO' (88%), but item 302 is also 88%",,,
+IMP5501,900555666,3,IM-55511,RETROVISOR PLEGABLE NEGRO PAR,5.0,18500.00,303,ESPEJO RETROVISOR PLEGABLE NEGRO PAR DEMO,0.80,"Similar name to item 303 'ESPEJO RETROVISOR PLEGABLE NEGRO PAR DEMO' (80%), confirm before linking",,,
+LUB2231,900333444,,,(whole document),,,,,,"Lines add up to 211,200.00 but the invoice subtotal is 245,000.00",,,
