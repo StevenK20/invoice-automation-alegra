@@ -1,7 +1,6 @@
-# Case study: automating supplier-invoice entry for a motorcycle parts retailer
+# Case study: automating supplier-invoice entry for a retail business
 
-**Client profile:** a parts store and repair shop in Colombia. It has about 4,000 SKUs, more
-than 30 regular suppliers, and uses Alegra as its ERP and point of sale.
+**Client profile:** a retail business in Colombia that uses Alegra as its ERP and point of sale.
 **Role:** sole developer. I covered discovery, design and implementation, and I rolled the
 tool out to the staff.
 **Stack:** Python, DIAN UBL 2.1 XML, Alegra REST API, CSV-based human review.
@@ -13,10 +12,9 @@ as a ZIP with a PDF and a signed XML. The data was machine-readable, but the sto
 typed every invoice into Alegra by hand: about 35 a month, with roughly 600 product lines.
 
 Typing was not the hard part. Finding the product was. Suppliers use their own codes, and
-the store's catalog had grown organically, so the same part existed under barcodes,
-supplier codes, or no code at all. Every line meant a search by name. Large invoices were
-postponed, and some were never entered. The result was a catalog whose stock did not match
-the shelf: some products were negative, others showed stock that wasn't there.
+the catalog had grown organically, so the same part existed under barcodes,
+supplier codes, or no code at all. Every line meant a search by name. Large invoices took the
+longest, so inventory in the ERP tended to fall behind the stock on the shelf.
 
 There were also silent errors:
 - the same invoice entered twice (suppliers often resend it)
@@ -62,8 +60,8 @@ There were also silent errors:
   appear anywhere in the store's catalog. For one, the supplier's price list mapped its
   codes to barcodes. For the other, the store decided to adopt the supplier's codes as
   references and print its own labels. Matching stopped guessing in both cases.
-- An automated intake exposes years of manual drift. The bot was a good moment to merge
-  duplicated products, consolidate warehouses and fix products priced at almost zero.
+- An automated intake is a good moment to clean up the catalog: merging duplicate products,
+  consolidating warehouses and reviewing costs made matching more reliable.
 
 ## Result
 

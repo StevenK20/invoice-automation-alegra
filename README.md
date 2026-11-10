@@ -8,7 +8,7 @@ catalog and registers the purchase bill in [Alegra](https://www.alegra.com) thro
 API. Anything the bot is not sure about goes to a **human-review queue with the reason**, never
 into the books.
 
-Built for a real retail and repair business that handles about **35 supplier invoices and
+Built for a retail business that handles about **35 supplier invoices and
 600 product lines a month**. This repository is a sanitized portfolio version: the logic
 is the production logic, and **every company, NIT, product and amount in it is fictitious**.
 
@@ -29,8 +29,8 @@ Every purchase invoice was typed into the ERP by hand:
 
 A 40-line invoice took a long time, and the errors were silent: duplicated bills, stock
 added to the wrong product, credit notes typed as purchases, prices with the discount
-applied twice. Large invoices were sometimes postponed, so stock in the system drifted away
-from stock on the shelf.
+applied twice. Large invoices took the longest, so stock in the system tended to fall behind
+stock on the shelf.
 
 ## The solution
 
